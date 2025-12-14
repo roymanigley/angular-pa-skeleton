@@ -1,0 +1,14 @@
+<p-toolbar>
+    <ng-template #start>
+        <p-button icon="pi pi-plus" class="mr-2" text severity="secondary" />
+        <p-button icon="pi pi-print" class="mr-2" text severity="secondary" />
+        <p-button icon="pi pi-upload" text severity="secondary" />
+    </ng-template>
+    <ng-template #center>
+        <p>App Name</p>
+    </ng-template>
+    <ng-template #end>
+        <p-button *ngIf="!(authService.currentUser | async)" icon="pi pi-sign-in" pTooltip="Login" />
+        <p-button *ngIf="authService.currentUser | async" icon="pi pi-sign-out" pTooltip="Logout" (click)="authService.logout()" />
+    </ng-template>
+</p-toolbar>
