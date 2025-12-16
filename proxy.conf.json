@@ -1,0 +1,7 @@
+{
+  "/api": {
+    "target": "https://queue-service-api.eutima.ch",
+    "changeOrigin": true,
+    "secure": true
+  }
+}

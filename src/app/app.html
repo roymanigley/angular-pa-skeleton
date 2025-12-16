@@ -1,2 +1,19 @@
+<<<<<<< reflexion-roy
 <h1>Angular PA Skeleton</h1>
+=======
+<app-topbar-component />
+>>>>>>> master
 <router-outlet />
+
+{{ (authService.currentUser | async)?.username }}
+<form #form="ngForm" (ngSubmit)="login(form)">
+  <p>
+    <label for="username">username</label>
+    <input id="username" type="text" [(ngModel)]="username" name="username" required>
+  </p>
+  <p>
+    <label for="password">password</label>
+    <input id="password" type="password" [(ngModel)]="password" name="password" required>
+  </p>
+  <button type="submit" [disabled]="form.invalid">Login</button>
+</form>
